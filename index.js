@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // use res.render to load up an ejs view file
 
 // index page
-app.get('/index', function(req, res) {
+app.get('/', function(req, res) {
   var mascots = [
     {name:'Sammy', organization:"DigitalOcean", birth_year: 2012},
     {name:'Tux', organization:"Linux",birth_year:1996},
@@ -29,8 +29,8 @@ app.get('/index', function(req, res) {
 });
 
 // about page
-app.get('/login', function(req, res) {
-  res.render('pages/loginform');
+app.get('/about', function(req, res) {
+  res.render('pages/about');
 });
 
 const port = process.env.PORT;
